@@ -93,6 +93,7 @@
     "start": "concurrently \"npm run api\" \"npm run app\"",
     "api": "nodemon -r ./config/dotenv ./api/bin/www",
     "app": "node scripts/start.js --openBrowser",
+    "start-dev": "concurrently \"npm run api\" \"npm run app\"",
     "prod": "node -r ./config/dotenv ./api/bin/www",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
@@ -101,7 +102,8 @@
     "vrt:ci": "node vrt/backstop --test --report=CI",
     "vrt:coverage": "concurrently --success first --kill-others \"npm run api\" \"node scripts/start.js\" \"wait-on http://localhost:3000/ && npm run vrt\"",
     "vrt:coverage:ci": "concurrently --success first --kill-others \"npm run api\" \"node scripts/start.js\" \"wait-on http://localhost:3000/ && npm run vrt:ci\"",
-    "vrt:approve": "node vrt/backstop --approve"
+    "vrt:approve": "node vrt/backstop --approve",
+    "heroku-postbuild": "npm install && npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -118,6 +120,7 @@
       "last 1 safari version"
     ]
   },
+  "proxy": "http://localhost:3001",
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
