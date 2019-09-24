@@ -1,0 +1,125 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= subject %></title>
+</head>
+
+<body bgcolor="#f6f8f1"
+    style="min-width: 100% !important; margin: 0; padding: 0 ; color: #153643; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 16px; line-height: 22px;">
+    <table id="wrapper" bgcolor="#f6f8f1" align="center" cellpadding="0" cellspacing="0" border="0" width="100%"
+        style="max-width: 600px; padding: 35px 25px;">
+        <!-- SECTION HEADER -->
+        <tr>
+            <td>
+                <h2 style="letter-spacing: 5px; margin-bottom: 5px; color: #D64F32;">
+                    <a href="https://mevry.com" target="blank"
+                        style="white-space: nowrap; text-decoration: none; color: #D64F32; cursor: pointer;">
+                        <strong>Mevry | <%= appName %></strong>
+                    </a>
+                </h2>
+                <!--                   <hr style="max-width: 130px; color: #D64F32; border:1px #D64F32 solid;" align="left" /> -->
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table id="header-line" align="left" cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span style="font-size: 10px; color: #D64F32;white-space: nowrap;">AI FOR E-COMMERCE</span>
+                            </td>
+                            <td style="text-align: right ; font-size: 11px; ">
+                                <a href="https://mevry.myshopify.com" target="blank"
+                                    style="white-space: nowrap; padding: 3px 7px; margin-right: 7px; text-decoration: none; color: white; cursor: pointer; background-color: #D64F32;">Demo</a>
+                                <a href="https://apps.shopify.com/mevry"
+                                    style="white-space: nowrap; padding: 3px 7px; text-decoration: none; color: white; cursor: pointer; background-color: #95bf47;">Shopify</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <!-- SECTION MESSAGE -->
+        <tr>
+            <td>
+                <table id="message-content" align="center" cellpadding="0" cellspacing="0" border="0" width="100%"
+                    style="background-color: white; margin: 30px 0px; padding:20px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;">
+                    <tbody>
+                        <!-- GREETINGS -->
+                        <tr>
+                            <td
+                                style="color: #153643; font-size: 24px; line-height: 28px; font-weight: bold; padding: 0 0 15px;">
+                                Hi <%= recipientName %>,
+                            </td>
+                        </tr>
+                        <!-- BODY -->
+                        <tr>
+                            <td style="color: #153643; font-size: 16px; line-height: 22px; text-align: justify;">
+                                <!-- The reason to use PHP here is that it doesn't show HTML special character if using Blade syntax even with htmlspecialchars() and htmlspecialchars_decode() -->
+                                <p><%= body %></p>
+                                <p>
+                                        Please contact us if you have further questions!    
+                                </p>
+                            </td>
+                        </tr>
+                        <!-- SIGNATURE -->
+                        <tr>
+                            <td style="color: #153643; font-size: 16px; line-height: 22px; padding: 20px 0px 20 0px;">
+                                <p>Yours faithfully,</p>
+                                <h3>The team at Mevry</h3>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <!-- SECTION FOOTER -->
+        <tr>
+            <td>
+                <table id="contact-links" align="center" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td align="center">
+                            <a href="http://www.facebook.com/mevry" target="blank"
+                                style="white-space: nowrap; padding: 5px 5px; margin: 3px; text-decoration: none; font-size: 11px; color: #3b5998; cursor: pointer; font-weight:bold;">facebook</a>
+                        </td>
+                        <td>|</td>
+                        <td align="center">
+                            <a href="http://www.twitter.com/mevry" target="blank"
+                                style="white-space: nowrap; padding: 5px 5px; margin: 3px; text-decoration: none; font-size: 11px; color: #55acee; cursor: pointer; font-weight:bold;">twitter</a>
+                        </td>
+                        <td>|</td>
+                        <td align="center">
+                            <a href="http://www.instagram.com/mevry" target="blank"
+                                style="white-space: nowrap; padding: 5px 5px; margin: 3px; text-decoration: none; font-size: 11px; color: #e95950; cursor: pointer; font-weight:bold;">instagram</a>
+                        </td>
+                        <td>|</td>
+                        <td align="center">
+                            <a href="mailto:contact@mevry.com"
+                                style="white-space: nowrap; padding: 5px 5px; margin: 3px; text-decoration: none; font-size: 11px; color: red; cursor: pointer; font-weight:bold; ">email</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center; font-size: 10px;">
+                If you no longer want to receive any more messages from us, you can
+                <a href="https://mevry.com/unsubscribe" style="color: #D64F32; text-decoration: none;"
+                    target="blank">unsubscribe here</a>.
+            </td>
+        </tr>
+    </table>
+    <!--[if (gte mso 9)|(IE)]>
+          
+    </td>
+</tr>
+</table>
+<![endif]-->
+</body>
+
+</html>

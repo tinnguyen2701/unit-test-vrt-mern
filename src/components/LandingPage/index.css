@@ -1,0 +1,10 @@
+.table .Polaris-Button {
+  padding-top: 0;
+ }
+
+@media (max-width: 420px){
+  .table > div {  
+   flex-wrap: nowrap;
+   overflow: auto;
+ }
+}

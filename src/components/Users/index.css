@@ -1,0 +1,5 @@
+@media (max-width: 457px){
+   .resource-list .Polaris-ResourceList__ItemWrapper .Polaris-Stack {
+    display: block;
+  }
+}

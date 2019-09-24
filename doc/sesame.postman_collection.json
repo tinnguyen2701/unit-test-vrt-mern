@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "9793638c-8030-4313-885e-b304a4e97add",
+		"name": "Sesame",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sesame - POST Users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YXdlc29tZXByb3h5dGVzdHVzZXI6YXdlc29tZXByb3h5dGVzdHBhc3N3b3Jk"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": [\n        {\n            \"email\": \"sean@mevry.com\",\n            \"password\": \"hashstring\",\n            \"name\": \"Sean\",\n            \"role\": \"ROLE_ADMIN\"\n        },\n\t\t{\n            \"email\": \"dev@mevry.com\",\n            \"password\": \"hashstring\",\n            \"name\": \"Dev\",\n            \"role\": \"ROLE_MARKETER\"\n        }\n    ],\n    \"options\": {\n        \"upsert\": false\n    }\n}"
+				},
+				"url": {
+					"raw": "https://test.mevry.com/dataproxy/apps/sesame/collections/users",
+					"protocol": "https",
+					"host": [
+						"test",
+						"mevry",
+						"com"
+					],
+					"path": [
+						"dataproxy",
+						"apps",
+						"sesame",
+						"collections",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sesame - GET Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YXdlc29tZXByb3h5dGVzdHVzZXI6YXdlc29tZXByb3h5dGVzdHBhc3N3b3Jk"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://test.mevry.com/dataproxy/apps/sesame/collections/users",
+					"protocol": "https",
+					"host": [
+						"test",
+						"mevry",
+						"com"
+					],
+					"path": [
+						"dataproxy",
+						"apps",
+						"sesame",
+						"collections",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EziCompare - Get all subs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YXdlc29tZXByb3h5dGVzdHVzZXI6YXdlc29tZXByb3h5dGVzdHBhc3N3b3Jk"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://test.mevry.com/dataproxy/apps/ezicompare/collections/subscriptions",
+					"protocol": "https",
+					"host": [
+						"test",
+						"mevry",
+						"com"
+					],
+					"path": [
+						"dataproxy",
+						"apps",
+						"ezicompare",
+						"collections",
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Negotiation - Get all subs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YXdlc29tZXByb3h5dGVzdHVzZXI6YXdlc29tZXByb3h5dGVzdHBhc3N3b3Jk"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://test.mevry.com/dataproxy/apps/negotiation/collections/subscriptions?fields=charge,shop",
+					"protocol": "https",
+					"host": [
+						"test",
+						"mevry",
+						"com"
+					],
+					"path": [
+						"dataproxy",
+						"apps",
+						"negotiation",
+						"collections",
+						"subscriptions"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "charge,shop"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

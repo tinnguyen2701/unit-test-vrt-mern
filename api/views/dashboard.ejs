@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/3.17.0/polaris.min.css" />
+  </head>
+  <body>
+  <script>
+    window['<%= globalVar %>'] = { 
+      shop: '<%= shop %>',
+      apiKey: '<%= apiKey %>',
+      subscriptionInfo: <%= subscriptionInfo %>,
+      forceRedirect: false
+    };
+  </script>
+  <style>
+    .dashboard-header {  
+      border-bottom: lightgray solid 2px;
+      font-size: 16px;
+      padding: 16px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .dashboard-button {
+      border: lightgray solid 1px;
+      border-radius: 5px;
+      padding: 8px;
+      text-decoration: none;
+    }
+  </style>
+
+  <div class="dashboard-header">
+    <span><%= application %> admin dashboard for <%= shop %></span>
+    <a class="dashboard-button" href="<%= process.env.REACT_APP_BASE_URL %>appview/<%= application %>">Back</a>
+    <a class="dashboard-button" href="<%= process.env.REACT_APP_BASE_URL %>landingpage">Home</a>
+  </div>
+
+  <div id="root"></div>
+
+<% jsAssets.forEach(function(jsAsset){ %>
+  <script src="<%= jsAsset.src %>"></script>
+<% }); %>
+
+  </body>
+</html>
