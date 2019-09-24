@@ -90,7 +90,7 @@
     "nodemon": "^1.19.1"
   },
   "scripts": {
-    "start": "concurrently \"npm run api\" \"npm run app\"",
+    "start": "concurrently \"nodemon -r ./config/dotenv ./api/bin/www\" \"npm run app\"",
     "api": "nodemon -r ./config/dotenv ./api/bin/www",
     "app": "node scripts/start.js --openBrowser",
     "start-dev": "concurrently \"npm run api\" \"npm run app\"",
